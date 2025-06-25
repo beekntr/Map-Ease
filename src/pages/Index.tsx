@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -40,33 +41,37 @@ const Index = () => {
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#features"
+              <Link
+                to="/features"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 Features
-              </a>
-              <a
-                href="#solutions"
+              </Link>
+              <Link
+                to="/solutions"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 Solutions
-              </a>
-              <a
-                href="#pricing"
+              </Link>
+              <Link
+                to="/pricing"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 Pricing
-              </a>
-              <Button variant="outline" size="sm">
-                Login
-              </Button>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
-              >
-                Get Started
-              </Button>
+              </Link>
+              <Link to="/login">
+                <Button variant="outline" size="sm">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/get-started">
+                <Button
+                  size="sm"
+                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -98,16 +103,20 @@ const Index = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
-              >
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Book Demo
-              </Button>
+              <Link to="/get-started">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              <Link to="/demo">
+                <Button variant="outline" size="lg">
+                  Book Demo
+                </Button>
+              </Link>
             </div>
             <div className="flex items-center space-x-8 pt-4">
               <div className="flex items-center space-x-2">
@@ -420,16 +429,20 @@ const Index = () => {
               visitors and improve their venue experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
-              >
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Schedule Demo
-              </Button>
+              <Link to="/get-started">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              <Link to="/demo">
+                <Button variant="outline" size="lg">
+                  Schedule Demo
+                </Button>
+              </Link>
             </div>
             <p className="text-sm text-muted-foreground">
               No setup fees • 14-day free trial • Cancel anytime
